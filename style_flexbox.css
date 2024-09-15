@@ -1,11 +1,11 @@
-:root {
-    --navbarFooterColor: beige;
-    --navbarFooterTextColor: black;
-    --hoverColor: tan;
-    --articleBackgroundColor: brown;
-    --bodyColor: brown;
-    --navbarFooterFont: 'Courier New', Courier, monospace;
-    --articleFont: Verdana, Geneva, Tahoma, sans-serif;
+:root{
+    --navbarFooterColor:beige;
+    --navbarFooterTextColor:black;
+    --hoverColor:tan;
+    --articleBackgroundColor:brown;
+    --bodyColor:brown;
+    --navbarFooterFont:'Courier New', Courier, monospace;
+    --articleFont:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
@@ -93,7 +93,7 @@ footer {
     max-width: 100%;
     background-color: var(--navbarFooterColor);
     font-size: 1.5em;
-    font-family: var(--navbarFooterColor);
+    font-family: var(--navbarFooterFont);
     font-weight: bolder;
     text-align: center;
     margin: 0;
