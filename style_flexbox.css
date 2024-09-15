@@ -1,12 +1,22 @@
+:root {
+    --navbarFooterColor: beige;
+    --navbarFooterTextColor: black;
+    --hoverColor: tan;
+    --articleBackgroundColor: brown;
+    --bodyColor: brown;
+    --navbarFooterFont: 'Courier New', Courier, monospace;
+    --articleFont: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
 
 header {
     max-width: 100%;
-    background-color: beige;
+    background-color: var(--navbarFooterColor);
     font-size: 1.5em;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--navbarFooterFont);
     font-weight: bolder;
 }
 
@@ -21,46 +31,69 @@ header ul {
 
 header ul li {
     flex: 1 1 0;
+    width: 100%;
 }
 
 header a {
     text-decoration: none;
-    color: black;
+    color: var(--navbarFooterTextColor);
     padding: 10px;
     text-align: center;
     transition: background-color .3s;
 }
 
 header a:hover {
-    background-color: tan;
+    background-color: var(--hoverColor);
 }
 
 header a:hover:not(.active) {
-    background-color: tan;
+    background-color: var(--hoverColor);
 }
 
 .active {
-    background-color: tan;
+    background-color: var(--hoverColor);
 }
 
 body {
     display: flex;
     flex-direction: column;
-    background-color: brown;
+    background-color: var(--bodyColor);
     margin: 0;
     padding: 0;
     min-height: 100vh;
 }
 
 main {
+    display: flex;
     flex: 1;
 }
 
+main div {
+    padding: 5px;
+    border: 2px solid tan;
+    background-color: var(--articleBackgroundColor);
+    text-align: center;
+    font-family: var(--articleFont);
+}
+
+.article1 {
+    flex: 1;
+}
+
+.article2 {
+    flex: 2;
+}
+
+.article3 {
+    flex: 3;
+}
+
+
 footer {
     max-width: 100%;
-    background-color: beige;
+    background-color: var(--navbarFooterColor);
     font-size: 1.5em;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--navbarFooterColor);
     font-weight: bolder;
     text-align: center;
     margin: 0;
@@ -69,4 +102,21 @@ footer {
 
 footer p {
     padding: 10px;
+}
+
+
+@media screen and (max-width:768px) {
+    header ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header ul li {
+        width: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
 }
