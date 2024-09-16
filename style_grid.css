@@ -1,0 +1,106 @@
+:root {
+    --navbarFooterColor: beige;
+    --navbarFooterTextColor: black;
+    --hoverColor: tan;
+    --articleBackgroundColor: brown;
+    --bodyColor: brown;
+    --navbarFooterFont: 'Courier New', Courier, monospace;
+    --articleFont: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bodyColor);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    grid-area: header;
+    max-width: 100%;
+    background-color: var(--navbarFooterColor);
+    font-size: 1.5em;
+    font-family: var(--navbarFooterFont);
+    font-weight: bolder;
+}
+
+header ul {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:60%;
+}
+
+
+header a {
+    text-decoration: none;
+    color: var(--navbarFooterTextColor);
+    padding: 10px;
+    text-align: center;
+    transition: background-color .3s;
+}
+
+header a:hover {
+    background-color: var(--hoverColor);
+}
+
+header a:hover:not(.active) {
+    background-color: var(--hoverColor);
+}
+
+.active {
+    background-color: var(--hoverColor);
+}
+
+main{
+    grid-area: main;
+    grid-template-columns: repeat(7,1fr);
+    gap:10px;
+}
+
+main div {
+    padding: 5px;
+    border: 2px solid tan;
+    background-color: var(--articleBackgroundColor);
+    text-align: center;
+    font-family: var(--articleFont);
+}
+
+footer {
+    grid-area: footer;
+    max-width: 100%;
+    background-color: var(--navbarFooterColor);
+    font-size: 1.5em;
+    font-family: var(--navbarFooterFont);
+    font-weight: bolder;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+footer {
+    max-width: 100%;
+    background-color: var(--navbarFooterColor);
+    font-size: 1.5em;
+    font-family: var(--navbarFooterFont);
+    font-weight: bolder;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer p {
+    padding: 10px;
+}
