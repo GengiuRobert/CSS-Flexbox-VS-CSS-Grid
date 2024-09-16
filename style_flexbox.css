@@ -73,7 +73,7 @@ main div {
     border: 2px solid tan;
     background-color: var(--articleBackgroundColor);
     text-align: center;
-    font-family: var(--articleFont);
+    font-family: var(--articleFont)
 }
 
 .article1 {

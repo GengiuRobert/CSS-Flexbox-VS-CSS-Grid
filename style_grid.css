@@ -38,10 +38,8 @@ header ul {
     margin: 0;
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:60%;
+    grid-template-columns: repeat(2, 1fr);
 }
-
 
 header a {
     text-decoration: none;
@@ -63,10 +61,10 @@ header a:hover:not(.active) {
     background-color: var(--hoverColor);
 }
 
-main{
+main {
     grid-area: main;
-    grid-template-columns: repeat(7,1fr);
-    gap:10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
 }
 
 main div {
@@ -75,6 +73,18 @@ main div {
     background-color: var(--articleBackgroundColor);
     text-align: center;
     font-family: var(--articleFont);
+}
+
+.article1 {
+    grid-column: span 1;
+}
+
+.article2 {
+    grid-column: span 2;
+}
+
+.article3 {
+    grid-column: span 3;
 }
 
 footer {
@@ -89,18 +99,28 @@ footer {
     padding: 0;
 }
 
-
-footer {
-    max-width: 100%;
-    background-color: var(--navbarFooterColor);
-    font-size: 1.5em;
-    font-family: var(--navbarFooterFont);
-    font-weight: bolder;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
 footer p {
     padding: 10px;
+}
+
+@media screen and (max-width:768px) {
+    header ul {
+        grid-template-columns: auto;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    footer  {
+        grid-template-columns: auto;
+    }
+
+    .article1,
+    .article2,
+    .article3 {
+        grid-column: span 1;
+    }
+
 }
